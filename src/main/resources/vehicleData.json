@@ -1,0 +1,952 @@
+[
+  {
+    "type": "car",
+    "vin": "WAUBVAFB4BN838575",
+    "make": "Acura",
+    "model": "TL",
+    "color": "Turquoise",
+    "year": 2000,
+    "wheels": 0,
+    "mileage": 77622,
+    "price": 73791.16,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-04-04T08:43:30Z",
+      "lastInsured": "2018-06-07T12:35:52Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "ev",
+    "vin": "WVGAV7AX4BW279085",
+    "make": "Land Rover",
+    "model": "Discovery",
+    "color": "Turquoise",
+    "year": 1996,
+    "wheels": 0,
+    "mileage": 50055,
+    "price": 64389.78,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-10-06T15:09:48Z",
+      "lastInsured": "2018-05-15T13:28:07Z"
+    },
+    "fuel": 5
+  },
+  {
+    "type": "ev",
+    "vin": "JN1AJ0HP3AM005192",
+    "make": "BMW",
+    "model": "Z4 M",
+    "color": "Purple",
+    "year": 2006,
+    "wheels": 0,
+    "mileage": 30047,
+    "price": 55959.26,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-10-13T14:53:49Z",
+      "lastInsured": "2018-09-09T17:40:46Z"
+    },
+    "fuel": 10
+  },
+  {
+    "type": "truck",
+    "vin": "1GYS3MKJ8FR924133",
+    "make": "Toyota",
+    "model": "Camry",
+    "color": "Violet",
+    "year": 2002,
+    "wheels": 0,
+    "mileage": 213,
+    "price": 45137.45,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-06-02T14:47:48Z",
+      "lastInsured": "2018-09-05T16:15:19Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "truck",
+    "vin": "YV4960DL4A2198997",
+    "make": "Lotus",
+    "model": "Elan",
+    "color": "Yellow",
+    "year": 1992,
+    "wheels": 0,
+    "mileage": 87064,
+    "price": 18049.83,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-10-31T20:00:41Z",
+      "lastInsured": "2019-02-02T05:25:21Z"
+    },
+    "fuel": 13
+  },
+  {
+    "type": "truck",
+    "vin": "WBAEU334X3P495522",
+    "make": "Land Rover",
+    "model": "Range Rover",
+    "color": "Puce",
+    "year": 2001,
+    "wheels": 0,
+    "mileage": 38782,
+    "price": 10663.14,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-03-04T13:50:10Z",
+      "lastInsured": "2018-06-22T14:17:14Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "car",
+    "vin": "1J4NF1FB1AD124348",
+    "make": "Maserati",
+    "model": "Coupe",
+    "color": "Yellow",
+    "year": 2005,
+    "wheels": 0,
+    "mileage": 95715,
+    "price": 38690.04,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-07-09T15:06:05Z",
+      "lastInsured": "2018-11-28T20:45:33Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "ev",
+    "vin": "5FPYK1F51EB826748",
+    "make": "Ford",
+    "model": "Aerostar",
+    "color": "Purple",
+    "year": 1987,
+    "wheels": 0,
+    "mileage": 86765,
+    "price": 32367.73,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-02-16T14:17:10Z",
+      "lastInsured": "2018-02-16T15:59:03Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "motorcycle",
+    "vin": "WAURVAFD7CN810027",
+    "make": "Dodge",
+    "model": "Ram Van 2500",
+    "color": "Purple",
+    "year": 2002,
+    "wheels": 0,
+    "mileage": 89956,
+    "price": 49671.0,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-03-18T19:15:45Z",
+      "lastInsured": "2018-03-10T08:25:08Z"
+    },
+    "fuel": 14
+  },
+  {
+    "type": "ev",
+    "vin": "WAUAFAFL3FN071955",
+    "make": "Chevrolet",
+    "model": "Impala",
+    "color": "Green",
+    "year": 2006,
+    "wheels": 0,
+    "mileage": 6713,
+    "price": 23162.96,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-12-03T11:15:30Z",
+      "lastInsured": "2018-09-21T21:31:31Z"
+    },
+    "fuel": 14
+  },
+  {
+    "type": "truck",
+    "vin": "19XFA1F3XBE171847",
+    "make": "Dodge",
+    "model": "Viper",
+    "color": "Purple",
+    "year": 1992,
+    "wheels": 0,
+    "mileage": 96320,
+    "price": 16323.13,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-03-28T22:47:49Z",
+      "lastInsured": "2018-06-30T23:05:44Z"
+    },
+    "fuel": 6
+  },
+  {
+    "type": "car",
+    "vin": "WDDGF5EB6AF150719",
+    "make": "Mitsubishi",
+    "model": "Pajero",
+    "color": "Goldenrod",
+    "year": 1998,
+    "wheels": 0,
+    "mileage": 69993,
+    "price": 13750.73,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-02-12T04:35:37Z",
+      "lastInsured": "2018-04-18T12:52:30Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "ev",
+    "vin": "WA1CGAFE7BD870366",
+    "make": "Mazda",
+    "model": "Mazda3",
+    "color": "Indigo",
+    "year": 2011,
+    "wheels": 0,
+    "mileage": 18056,
+    "price": 52958.07,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-01-16T06:08:26Z",
+      "lastInsured": "2018-05-05T04:42:47Z"
+    },
+    "fuel": 9
+  },
+  {
+    "type": "car",
+    "vin": "3GYFNEE36FS245229",
+    "make": "MINI",
+    "model": "Cooper Countryman",
+    "color": "Fuscia",
+    "year": 2011,
+    "wheels": 0,
+    "mileage": 27544,
+    "price": 63497.35,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-03-14T00:19:33Z",
+      "lastInsured": "2018-07-03T10:32:56Z"
+    },
+    "fuel": 12
+  },
+  {
+    "type": "ev",
+    "vin": "KMHEC4A48FA330909",
+    "make": "BMW",
+    "model": "745",
+    "color": "Puce",
+    "year": 2002,
+    "wheels": 0,
+    "mileage": 51437,
+    "price": 7473.24,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-03-17T15:37:16Z",
+      "lastInsured": "2018-05-04T20:34:36Z"
+    },
+    "fuel": 8
+  },
+  {
+    "type": "truck",
+    "vin": "SCFBF04B88G209848",
+    "make": "Honda",
+    "model": "Accord",
+    "color": "Khaki",
+    "year": 1994,
+    "wheels": 0,
+    "mileage": 39888,
+    "price": 45102.01,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-02-13T22:53:45Z",
+      "lastInsured": "2018-07-18T09:42:50Z"
+    },
+    "fuel": 10
+  },
+  {
+    "type": "truck",
+    "vin": "JN1AZ4EH0CM395796",
+    "make": "Dodge",
+    "model": "Dakota Club",
+    "color": "Yellow",
+    "year": 1995,
+    "wheels": 0,
+    "mileage": 43696,
+    "price": 33781.33,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-02-01T16:22:33Z",
+      "lastInsured": "2018-08-06T22:51:49Z"
+    },
+    "fuel": 14
+  },
+  {
+    "type": "ev",
+    "vin": "1G6AA5RA5E0080125",
+    "make": "Dodge",
+    "model": "Neon",
+    "color": "Fuscia",
+    "year": 2002,
+    "wheels": 0,
+    "mileage": 23633,
+    "price": 72555.09,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-02-27T07:33:41Z",
+      "lastInsured": "2018-05-06T16:34:30Z"
+    },
+    "fuel": 13
+  },
+  {
+    "type": "truck",
+    "vin": "KNAGG4A82A5491176",
+    "make": "Mercury",
+    "model": "Cougar",
+    "color": "Red",
+    "year": 1999,
+    "wheels": 0,
+    "mileage": 48487,
+    "price": 76404.62,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-01-21T18:09:22Z",
+      "lastInsured": "2018-05-13T13:01:34Z"
+    },
+    "fuel": 9
+  },
+  {
+    "type": "motorcycle",
+    "vin": "1GYS3DEF1DR763287",
+    "make": "Chevrolet",
+    "model": "Impala SS",
+    "color": "Maroon",
+    "year": 1995,
+    "wheels": 0,
+    "mileage": 74286,
+    "price": 36605.59,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-08-02T16:25:47Z",
+      "lastInsured": "2018-12-03T18:47:00Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "motorcycle",
+    "vin": "1D7RB1CP6BS379793",
+    "make": "Isuzu",
+    "model": "Ascender",
+    "color": "Aquamarine",
+    "year": 2006,
+    "wheels": 0,
+    "mileage": 64588,
+    "price": 44744.33,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-08-08T06:12:40Z",
+      "lastInsured": "2019-01-13T04:21:18Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "car",
+    "vin": "3D7JB1EPXBG784489",
+    "make": "Ford",
+    "model": "Explorer Sport Trac",
+    "color": "Indigo",
+    "year": 2007,
+    "wheels": 0,
+    "mileage": 77802,
+    "price": 55926.29,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-12-05T04:18:08Z",
+      "lastInsured": "2019-01-27T22:55:37Z"
+    },
+    "fuel": 12
+  },
+  {
+    "type": "motorcycle",
+    "vin": "SCBBB7ZH8BC578906",
+    "make": "Audi",
+    "model": "A6",
+    "color": "Pink",
+    "year": 2009,
+    "wheels": 0,
+    "mileage": 14957,
+    "price": 25685.47,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-10-04T18:03:41Z",
+      "lastInsured": "2018-06-21T11:13:33Z"
+    },
+    "fuel": 5
+  },
+  {
+    "type": "ev",
+    "vin": "1G6DX67D870065684",
+    "make": "Toyota",
+    "model": "Corolla",
+    "color": "Violet",
+    "year": 1998,
+    "wheels": 0,
+    "mileage": 26309,
+    "price": 64367.16,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-05-11T13:07:23Z",
+      "lastInsured": "2019-02-23T15:53:56Z"
+    },
+    "fuel": 9
+  },
+  {
+    "type": "ev",
+    "vin": "2C4RDGBG4CR243318",
+    "make": "Lexus",
+    "model": "GS",
+    "color": "Red",
+    "year": 1997,
+    "wheels": 0,
+    "mileage": 77803,
+    "price": 86467.18,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-03-19T09:42:32Z",
+      "lastInsured": "2018-01-17T06:19:32Z"
+    },
+    "fuel": 8
+  },
+  {
+    "type": "ev",
+    "vin": "3C3CFFCR0ET625585",
+    "make": "Honda",
+    "model": "del Sol",
+    "color": "Mauv",
+    "year": 1996,
+    "wheels": 0,
+    "mileage": 32571,
+    "price": 74054.38,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-10-19T00:06:01Z",
+      "lastInsured": "2018-01-09T12:53:08Z"
+    },
+    "fuel": 9
+  },
+  {
+    "type": "car",
+    "vin": "3C6JD6BP8CG179210",
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "color": "Puce",
+    "year": 1997,
+    "wheels": 0,
+    "mileage": 75408,
+    "price": 48001.09,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-06-23T06:31:43Z",
+      "lastInsured": "2018-07-29T16:19:33Z"
+    },
+    "fuel": 6
+  },
+  {
+    "type": "car",
+    "vin": "JM1DE1HY5B0035980",
+    "make": "Austin",
+    "model": "Mini Cooper S",
+    "color": "Goldenrod",
+    "year": 1963,
+    "wheels": 0,
+    "mileage": 68464,
+    "price": 32690.44,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-02-20T03:36:26Z",
+      "lastInsured": "2018-08-29T09:35:14Z"
+    },
+    "fuel": 8
+  },
+  {
+    "type": "car",
+    "vin": "1G4HD572X8U338730",
+    "make": "GMC",
+    "model": "Safari",
+    "color": "Blue",
+    "year": 1999,
+    "wheels": 0,
+    "mileage": 72659,
+    "price": 48313.06,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-07-09T21:38:40Z",
+      "lastInsured": "2018-07-08T16:01:47Z"
+    },
+    "fuel": 7
+  },
+  {
+    "type": "motorcycle",
+    "vin": "WAUHF78P28A711598",
+    "make": "Mercury",
+    "model": "Mariner",
+    "color": "Pink",
+    "year": 2007,
+    "wheels": 0,
+    "mileage": 22979,
+    "price": 55367.2,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-11-08T09:34:23Z",
+      "lastInsured": "2019-03-19T13:26:21Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "truck",
+    "vin": "WBA3N3C54EK879986",
+    "make": "Volvo",
+    "model": "V40",
+    "color": "Yellow",
+    "year": 2001,
+    "wheels": 0,
+    "mileage": 94206,
+    "price": 87080.56,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-09-30T13:54:42Z",
+      "lastInsured": "2018-05-28T16:05:05Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "motorcycle",
+    "vin": "3VW8S7AT5FM108258",
+    "make": "Honda",
+    "model": "Civic",
+    "color": "Crimson",
+    "year": 2007,
+    "wheels": 0,
+    "mileage": 13518,
+    "price": 59598.5,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-04-28T12:28:24Z",
+      "lastInsured": "2018-11-30T23:57:01Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "ev",
+    "vin": "TRUTC28N261818970",
+    "make": "Chevrolet",
+    "model": "Astro",
+    "color": "Indigo",
+    "year": 2003,
+    "wheels": 0,
+    "mileage": 34845,
+    "price": 22453.56,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-08-01T10:49:00Z",
+      "lastInsured": "2018-09-28T02:26:56Z"
+    },
+    "fuel": 9
+  },
+  {
+    "type": "car",
+    "vin": "SALFR2BN6BH714684",
+    "make": "BMW",
+    "model": "3 Series",
+    "color": "Yellow",
+    "year": 2011,
+    "wheels": 0,
+    "mileage": 75172,
+    "price": 83048.12,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-07-06T22:42:56Z",
+      "lastInsured": "2019-03-07T21:55:09Z"
+    },
+    "fuel": 14
+  },
+  {
+    "type": "ev",
+    "vin": "1GT01ZCG1EF257862",
+    "make": "Mazda",
+    "model": "CX-9",
+    "color": "Aquamarine",
+    "year": 2011,
+    "wheels": 0,
+    "mileage": 57796,
+    "price": 59351.64,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-11-14T10:32:52Z",
+      "lastInsured": "2018-02-19T22:47:04Z"
+    },
+    "fuel": 5
+  },
+  {
+    "type": "truck",
+    "vin": "5UMDU93597L863157",
+    "make": "Suzuki",
+    "model": "SJ",
+    "color": "Yellow",
+    "year": 1986,
+    "wheels": 0,
+    "mileage": 2497,
+    "price": 41063.4,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-08-20T08:07:24Z",
+      "lastInsured": "2018-07-14T17:30:33Z"
+    },
+    "fuel": 13
+  },
+  {
+    "type": "car",
+    "vin": "1B3CC5FB1AN728037",
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "color": "Purple",
+    "year": 2004,
+    "wheels": 0,
+    "mileage": 51267,
+    "price": 11889.78,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-02-24T15:00:57Z",
+      "lastInsured": "2018-12-28T07:43:22Z"
+    },
+    "fuel": 8
+  },
+  {
+    "type": "ev",
+    "vin": "1FMCU5K3XAK397446",
+    "make": "Ford",
+    "model": "Escort",
+    "color": "Blue",
+    "year": 2000,
+    "wheels": 0,
+    "mileage": 54651,
+    "price": 17932.05,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-02-01T11:16:20Z",
+      "lastInsured": "2018-12-23T10:27:49Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "car",
+    "vin": "JN8BS1MW5DM155525",
+    "make": "Cadillac",
+    "model": "Escalade",
+    "color": "Aquamarine",
+    "year": 1999,
+    "wheels": 0,
+    "mileage": 74214,
+    "price": 42880.21,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-09-20T05:50:38Z",
+      "lastInsured": "2018-01-14T07:37:41Z"
+    },
+    "fuel": 5
+  },
+  {
+    "type": "motorcycle",
+    "vin": "2C3CDXJG2CH546194",
+    "make": "Mercedes-Benz",
+    "model": "S-Class",
+    "color": "Red",
+    "year": 1988,
+    "wheels": 0,
+    "mileage": 42037,
+    "price": 15778.29,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-12-31T23:08:17Z",
+      "lastInsured": "2018-12-06T19:45:14Z"
+    },
+    "fuel": 12
+  },
+  {
+    "type": "truck",
+    "vin": "WVGBF7A96AD125006",
+    "make": "Daihatsu",
+    "model": "Charade",
+    "color": "Mauv",
+    "year": 1992,
+    "wheels": 0,
+    "mileage": 40440,
+    "price": 12303.06,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-09-07T15:31:17Z",
+      "lastInsured": "2019-03-17T08:57:17Z"
+    },
+    "fuel": 12
+  },
+  {
+    "type": "car",
+    "vin": "WAUWGAFC9DN583915",
+    "make": "Audi",
+    "model": "TT",
+    "color": "Aquamarine",
+    "year": 2012,
+    "wheels": 0,
+    "mileage": 49649,
+    "price": 73581.77,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-06-14T10:09:35Z",
+      "lastInsured": "2018-01-07T04:59:59Z"
+    },
+    "fuel": 13
+  },
+  {
+    "type": "ev",
+    "vin": "JHMFA3F25BS376703",
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "color": "Blue",
+    "year": 2008,
+    "wheels": 0,
+    "mileage": 5956,
+    "price": 75419.91,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-09-13T23:40:26Z",
+      "lastInsured": "2018-07-27T07:53:48Z"
+    },
+    "fuel": 14
+  },
+  {
+    "type": "ev",
+    "vin": "1FTFW1E85AK308605",
+    "make": "Suzuki",
+    "model": "Grand Vitara",
+    "color": "Yellow",
+    "year": 2001,
+    "wheels": 0,
+    "mileage": 90355,
+    "price": 68274.35,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-07-06T05:19:50Z",
+      "lastInsured": "2018-05-30T04:42:01Z"
+    },
+    "fuel": 14
+  },
+  {
+    "type": "truck",
+    "vin": "1FTEX1CM1DK603567",
+    "make": "Honda",
+    "model": "Accord",
+    "color": "Purple",
+    "year": 1988,
+    "wheels": 0,
+    "mileage": 38202,
+    "price": 52032.91,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-12-09T13:00:23Z",
+      "lastInsured": "2018-05-22T04:13:41Z"
+    },
+    "fuel": 15
+  },
+  {
+    "type": "ev",
+    "vin": "TRUSX28N021599582",
+    "make": "Dodge",
+    "model": "Ram Van 3500",
+    "color": "Crimson",
+    "year": 1995,
+    "wheels": 0,
+    "mileage": 35838,
+    "price": 11893.56,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2019-03-16T22:03:45Z",
+      "lastInsured": "2018-07-05T20:17:18Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "motorcycle",
+    "vin": "1GYEK63N52R802367",
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "color": "Indigo",
+    "year": 1999,
+    "wheels": 0,
+    "mileage": 56423,
+    "price": 26557.23,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-03-13T04:20:49Z",
+      "lastInsured": "2018-02-05T10:10:18Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "ev",
+    "vin": "WBAVB17506N234221",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "color": "Indigo",
+    "year": 1992,
+    "wheels": 0,
+    "mileage": 94079,
+    "price": 39008.48,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": true,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-03-02T18:23:40Z",
+      "lastInsured": "2019-02-23T15:45:54Z"
+    },
+    "fuel": 11
+  },
+  {
+    "type": "motorcycle",
+    "vin": "JM3TB2BA1E0894601",
+    "make": "Kia",
+    "model": "Spectra",
+    "color": "Puce",
+    "year": 2008,
+    "wheels": 0,
+    "mileage": 33461,
+    "price": 11572.71,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-04-05T03:42:59Z",
+      "lastInsured": "2018-07-02T05:36:35Z"
+    },
+    "fuel": 9
+  },
+  {
+    "type": "ev",
+    "vin": "WA1EY74L39D411839",
+    "make": "Ford",
+    "model": "Freestar",
+    "color": "Turquoise",
+    "year": 2007,
+    "wheels": 0,
+    "mileage": 80019,
+    "price": 50633.63,
+    "description": 0,
+    "costToDealership": 0,
+    "clean": false,
+    "maintenanceAndInsurance": {
+      "lastServiced": "2018-12-03T17:25:48Z",
+      "lastInsured": "2018-06-01T01:49:17Z"
+    },
+    "fuel": 15
+  }
+]
