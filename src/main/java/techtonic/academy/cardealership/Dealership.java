@@ -2,7 +2,8 @@ package techtonic.academy.cardealership;
 
 import techtonic.academy.cardealership.sales.Customer;
 import techtonic.academy.cardealership.sales.Receipt;
-import techtonic.academy.cardealership.vehicles.Vehicle;
+import techtonic.academy.cardealership.vehicles.*;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
@@ -32,17 +33,50 @@ public class Dealership {
             System.out.println("\nCar: " + vehicles[i].getDescription());
             System.out.println("Price: " + priceOfCar);
             System.out.println("Remaining balance: " + balance);
-            checkModel(model);
 
-            if (balance.compareTo(priceOfCar) == 1) {
-                System.out.println("Purchased!");
-                balance = balance.subtract(priceOfCar);
-                addToCarLot(vehicles[i]);
-                factory.findAndRemoveCar(vehicles[i], i);
-            } else if (balance.compareTo(priceOfCar) == -1) {
-                System.out.println("Purchase Failed! Price exceeds balance.");
-                break;
+            if(checkModel(model)) {
+                if (balance.compareTo(priceOfCar) == 1) {
+                    System.out.println("Purchased!");
+                    balance = balance.subtract(priceOfCar);
+                    addToCarLot(vehicles[i]);
+                    factory.findAndRemoveCar(vehicles[i], i);
+                } else if (balance.compareTo(priceOfCar) == -1) {
+                    System.out.println("Purchase Failed! Price exceeds balance.");
+                    break;
+                }
+            } else {
+                //Do nothing
             }
+        }
+    }
+
+    public void purchaseVehicle(int vehicleIndex) {
+        System.out.println(Utils.printHzLine(50));
+        System.out.println("Purchasing Vehicle...");
+        Vehicle[] vehicles = Factory.readyToShip;
+
+        try {
+            BigDecimal priceOfCar = vehicles[vehicleIndex].getPrice();
+            String model = vehicles[vehicleIndex].getModel();
+            System.out.println("\nCar: " + vehicles[vehicleIndex].getDescription());
+            System.out.println("\nVIN: " + vehicles[vehicleIndex].getVin());
+            System.out.println("\nPrice: " + priceOfCar);
+
+            if(checkModel(model)) {
+                if (balance.compareTo(priceOfCar) == 1) {
+                    System.out.println("Purchased!");
+                    balance = balance.subtract(priceOfCar);
+                    addToCarLot(vehicles[vehicleIndex]);
+                    Factory.findAndRemoveCar(vehicles[vehicleIndex], vehicleIndex);
+                    System.out.println("\nRemaining balance: " + balance);
+                } else if (balance.compareTo(priceOfCar) == -1) {
+                    System.out.println("\nPurchase Failed! Price exceeds balance.\n");
+                }
+            } else {
+                // Do nothing
+            }
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Please enter a valid car from the factory list.\n");
         }
     }
 
@@ -164,7 +198,8 @@ public class Dealership {
     public void addToCarLot(Vehicle vehicle) {
         carLot.add(vehicle);
         models.add(vehicle.getModel());
-        System.out.println("\n<-- Car purchased and added to Car Lot: " + vehicle.getMake() + vehicle.getModel() + " -->");
+        System.out.println(Utils.printHzLine(50));
+        System.out.println("\n<-- Car purchased and added to Car Lot: " + vehicle.getMake() + vehicle.getModel() + " -->\n");
     }
 
     public boolean checkModel(String model) {
@@ -208,8 +243,42 @@ public class Dealership {
             "Dealership Name: " + name + "\n" +
             "Starting Balance: " + balance.setScale(2, RoundingMode.HALF_EVEN) + "\n" +
             "# of cars in lot: " + carLot.size() + "\n" +
+            "# of cars sold: " + "<- FILL IN SALES HISTORY INFORMATION ->" + "\n" +
             ANSI_RESET;
 
         System.out.println(dealershipString);
+    }
+
+    public void carLotSummary() {
+
+        if(carLot.size() == 0) {
+            System.out.println("\nYour car lot is currently empty\n");
+        } else {
+            for (int i = 0; i < carLot.size(); i++) {
+                String type = carLot.get(i).getType();
+                switch (type) {
+                    case "car":
+                        Car theCar = (Car) carLot.get(i);
+                        System.out.println(Utils.printHzLine(50));
+                        System.out.println("Vehicle " + (i+1) + " - Car: " + theCar.getDescription());
+                        break;
+                    case "truck":
+                        Truck theTruck = (Truck) carLot.get(i);
+                        System.out.println(Utils.printHzLine(50));
+                        System.out.println("Vehicle " + (i+1) + " - Truck: " + theTruck.getDescription());
+                        break;
+                    case "motorcycle":
+                        Motorcycle theMotorcycle = (Motorcycle) carLot.get(i);
+                        System.out.println(Utils.printHzLine(50));
+                        System.out.println("Vehicle " + (i+1) + " - Motorcycle: " + theMotorcycle.getDescription());
+                        break;
+                    case "ev":
+                        Ev theEv = (Ev) carLot.get(i);
+                        System.out.println(Utils.printHzLine(50));
+                        System.out.println("Vehicle " + (i+1) + " - EV: " + theEv.getDescription());
+                        break;
+                }
+            }
+        }
     }
 }

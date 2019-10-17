@@ -3,9 +3,7 @@ package techtonic.academy.cardealership;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import techtonic.academy.cardealership.vehicles.Vehicle;
-
-import java.io.FileNotFoundException;
+import techtonic.academy.cardealership.vehicles.*;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -14,14 +12,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 
 class Factory {
 
-    String name;
-    Vehicle[] readyToShip;
+    static String name;
+    static Vehicle[] readyToShip;
 
     public Factory(String name) {
         this.name = name;
@@ -97,7 +94,7 @@ class Factory {
         } else if (orderObject != null) {
             // We put the resulting Vehicle into an array before returning it because
             // the `manufacture` method returns an array
-            return new Vehicle[] { buildVehicle(orderObject) };
+            return new Vehicle[]{buildVehicle(orderObject)};
             // If orderArray and orderObject are both null,
             // then we don't have any orders to process
         } else {
@@ -135,7 +132,7 @@ class Factory {
                 // Get the Constructor of that Class
                 Constructor constructor = c.getConstructor(JsonObject.class, int.class);
                 vehicle = (Vehicle) constructor.newInstance(order, randomMPG);
-            } else if(capitalizedType.equals("Motorcycle")) {
+            } else if (capitalizedType.equals("Motorcycle")) {
                 int randomMPG = (int) (Math.random() * (60 - 30) + 1) + 60;
 
                 // Get the Constructor of that Class
@@ -148,7 +145,7 @@ class Factory {
                 // Get the Constructor of that Class
                 Constructor constructor = c.getConstructor(JsonObject.class, int.class, int.class);
                 vehicle = (Vehicle) constructor.newInstance(order, randomMPG, randomTC);
-            }else if (capitalizedType.equals("Ev")) {
+            } else if (capitalizedType.equals("Ev")) {
                 int randomRange = (int) (Math.random() * (400 - 250) + 1) + 250;
 
                 // Get the Constructor of that Class
@@ -184,7 +181,7 @@ class Factory {
     }
 
     // Remove car from readyToShip list
-    public void findAndRemoveCar(Vehicle vehicle, int index) {
+    public static void findAndRemoveCar(Vehicle vehicle, int index) {
 
         if (readyToShip == null || index < 0 || index >= readyToShip.length) {
             // Do nothing, readyToShip stays the same.
@@ -205,6 +202,37 @@ class Factory {
             readyToShip = anotherArray;
         }
 
+    }
+
+    // Display the factory inventory
+    public static void displayInventory() {
+
+        for (int i = 0; i < readyToShip.length; i++) {
+            String type = readyToShip[i].getType();
+            switch (type) {
+                case "car":
+                    Car theCar = (Car) readyToShip[i];
+                    System.out.println(Utils.printHzLine(50));
+                    System.out.println("Vehicle " + (i+1) + " - Car: " + theCar.getDescription());
+                    break;
+                case "truck":
+                    Truck theTruck = (Truck) readyToShip[i];
+                    System.out.println(Utils.printHzLine(50));
+                    System.out.println("Vehicle " + (i+1) + " - Truck: " + theTruck.getDescription());
+                    break;
+                case "motorcycle":
+                    Motorcycle theMotorcycle = (Motorcycle) readyToShip[i];
+                    System.out.println(Utils.printHzLine(50));
+                    System.out.println("Vehicle " + (i+1) + " - Motorcycle: " + theMotorcycle.getDescription());
+                    break;
+                case "ev":
+                    Ev theEv = (Ev) readyToShip[i];
+                    System.out.println(Utils.printHzLine(50));
+                    System.out.println("Vehicle " + (i+1) + " - EV: " + theEv.getDescription());
+                    break;
+            }
+        }
+        System.out.println();
     }
 
 }

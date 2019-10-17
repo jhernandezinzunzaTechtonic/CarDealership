@@ -1,6 +1,5 @@
 package techtonic.academy.cardealership;
 
-import java.util.Scanner;
 
 public class Utils {
 
@@ -12,10 +11,11 @@ public class Utils {
             printHzLine(61) + "\n" +
             ANSI_BLUE +
             "Enter \"exit\" at any point to quit the application\n" +
-            "Enter \"home\" at any point to return this this main menu" +
+            "Enter \"home\" at any point to return this this main menu\n" +
+            "Enter \"stats\" at any point to see your dealerships stats" +
             ANSI_RESET +
             "\n\nDealership Options: \n" +
-            "0 - Create a new dealership" +
+            "0 - Create a new dealership\n" +
             "1 - See current car lot inventory\n" +
             "2 - See factory inventory\n" +
             "3 - Purchase a vehicle\n";

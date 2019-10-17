@@ -3,26 +3,23 @@ package techtonic.academy.cardealership;
 import techtonic.academy.cardealership.sales.Customer;
 import techtonic.academy.cardealership.vehicles.*;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     private static String input;
     private static Scanner scanner = new Scanner(System.in);
-    private static String commandsArray[] = { "/help", "/home", "/exit" };
     private static Dealership userDealership;
-    private static Factory userFactory;
+    private static Factory userFactory = new Factory("Jose's Factory");
 
     public static void main(String[] args) {
-        theDealershipApp();
+        theDealershipApp(true);
     }
 
-    public static void theDealershipApp() {
+    public static void theDealershipApp(boolean first) {
         // Start the app at the main menu
-        Utils.displayMainMenu();
-        // Begin runtime loop
         while (!"exit".equalsIgnoreCase(input)) {
+            Utils.displayMainMenu();
+            System.out.println("Choose an option: ");
             input = scanner.nextLine();
 
             switch (input) {
@@ -34,86 +31,45 @@ public class Main {
                     break;
                 case "1":
                     System.out.println("Loading car lot inventory...");
-                    input = null;
+                    if(userDealership == null) {
+                        System.out.println("\nYou don't currently have a dealership, please create one.\n");
+                    } else {
+                        userDealership.carLotSummary();
+                        input = null;
+                    }
                     break;
                 case "2":
                     System.out.println("Loading factory inventory...");
+                    Utils.clearSorta();
+                    userFactory.displayInventory();
                     input = null;
                     break;
                 case "3":
-                    System.out.println("Loading purchase screen...");
-                    input = null;
+                    if(userDealership == null) {
+                        System.out.println("\nYou don't currently have a dealership, please create one.\n");
+                    } else {
+                        System.out.println("Enter the vehicle number you wish to purchase: ");
+                        try {
+                            int num = Integer.parseInt(scanner.nextLine());
+                            userDealership.purchaseVehicle(num);
+                            input = null;
+                        } catch (NumberFormatException e) {
+                            System.out.println("\nError: Please enter a number.\n");
+                        }
+                    }
                     break;
                 case "home":
                     Utils.clearSorta();
                     Utils.displayMainMenu();
                     input = null;
                     break;
+                case "status":
+                    userDealership.dealershipSummary();
+                    break;
             }
         }
         scanner.close();
 
-
-
-//        Utils.mainMenu();
-//        do {
-//            input = scanner.next();
-//            if (input.equalsIgnoreCase("/exit")) {
-//                System.out.println("Goodbye!");
-//                System.exit(0);
-//            } else if (Arrays.asList(commandsArray).contains(input)) {
-//                // Perform dealership actions
-//                switch (input) {
-//                    case "/help":
-//                        printHelpString(commandsArray);
-//                        break;
-//                    default:
-//                        System.out.println("The default case ran in theDealershipApp method...wait, what!?");
-//                }
-//            } else {
-//                System.out.println("Please enter a valid option (Enter \"/help\" at any point to see a list of commands)");
-//            }
-//        } while (!Arrays.asList(commandsArray).contains(input));
-
-
-
-//        Factory myfactory = new Factory("Jose's Factory");
-//
-//        String carsOrder = myfactory.getJsonString();
-//
-//        Dealership myDealership = new Dealership("The Dealz", new BigDecimal(10000000));
-//
-//        Vehicle myVehicles[] = myfactory.manufacture(carsOrder);
-//
-//        Car myCar = (Car) myVehicles[0];
-//
-//        Customer jose = new Customer("Jose", "123 Fake St.", "(123) 234-5678");
-
-//        for(int i = 0; i< myVehicles.length; i++){
-//            String type = myVehicles[i].getType();
-//            switch (type) {
-//                case "car":
-//                    Car theCar = (Car) myVehicles[i];
-//                    System.out.println("Car");
-//                    System.out.println("MPG: " + theCar.getMpg());
-//                    break;
-//                case "truck":
-//                    Truck theTruck = (Truck) myVehicles[i];
-//                    System.out.println("New Truck");
-//                    System.out.println("MPG: " + theTruck.getMpg());
-//                    System.out.println("Towing Capacity: " + theTruck.getTowingCapacity());
-//                    break;
-//                case "motorcycle":
-//                    Motorcycle theMotorcycle = (Motorcycle) myVehicles[i];
-//                    System.out.println("New Motorcycle");
-//                    System.out.println("MPG: " + theMotorcycle.getMpg());
-//                    break;
-//                case "ev":
-//                    Ev theEv = (Ev) myVehicles[i];
-//                    System.out.println("New EV");
-//                    System.out.println("Range: " + theEv.getRange());
-//                    break;
-//            }
 //
 //            System.out.println("Vehicle type: " + myVehicles[i].getType());
 //            System.out.println("Vin: " + myVehicles[i].getVin());
@@ -163,42 +119,22 @@ public class Main {
 //        myDealership.sellVehicle(myVehicles[0], jose);
     }
 
-    public static void printHelpString(String[] commands) {
-        String helpString = "Here is a list of possible commands:\n";
-
-        for (int i = 0; i < commands.length; i++) {
-            helpString += "\n" + commands[i];
-        }
-        Utils.printHzLine(50);
-        System.out.println(helpString);
-        Utils.printHzLine(50);
-    }
-
     public static void createDealership() {
         BigDecimal startingBalance = new BigDecimal(5000000);
         System.out.println("\nLet's create a dealership, please enter a name for your dealership:  ");
-        input = scanner.nextLine();
-        Utils.clearSorta();
-        userDealership = new Dealership(input, startingBalance);
-        userDealership.dealershipSummary();
+        String name = "";
 
-//        do {
-//            input = scanner.next();
-//            if (input.equalsIgnoreCase("/exit")) {
-//                System.out.println("Goodbye!");
-//                System.exit(0);
-//            } else if (Arrays.asList(commandsArray).contains(input)) {
-//                // Perform dealership actions
-//                switch (input) {
-//                    case "/help":
-//                        printHelpString(commandsArray);
-//                        break;
-//                    default:
-//                        System.out.println("The default case ran in theDealershipApp method...wait, what!?");
-//                }
-//            } else {
-//                System.out.println("\nPlease enter a valid option (Enter \"/help\" at any point to see a list of commands)");
-//            }
-//        } while (!Arrays.asList(commandsArray).contains(input));
+        do {
+            name = scanner.nextLine();
+
+            if (name.isBlank() || name.isEmpty()) {
+                System.out.println("Please enter a valid name for your dealership");
+            } else {
+                Utils.clearSorta();
+                userDealership = new Dealership(name, startingBalance);
+                userDealership.dealershipSummary();
+            }
+        } while (name.isBlank() || name.isEmpty());
     }
+
 }
