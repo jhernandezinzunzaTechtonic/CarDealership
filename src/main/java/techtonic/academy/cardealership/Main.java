@@ -86,14 +86,17 @@ public class Main {
                             if (num == 0) {
                                 System.out.println("Error: Please enter a valid car from the car lot list.\n");
                             } else {
-                                Customer customer = new Customer("jose", "123 Fake St", "123-456-7899");
-                                Vehicle vehicle = userDealership.carLot.get(num - 1);
-                                userDealership.sellVehicle(vehicle, customer);
-
-                                input = null;
+                                try {
+                                    Customer customer = new Customer("jose", "123 Fake St", "123-456-7899");
+                                    Vehicle vehicle = userDealership.carLot.get(num - 1);
+                                    userDealership.sellVehicle(vehicle, customer);
+                                    input = null;
+                                } catch(IndexOutOfBoundsException e) {
+                                    System.out.println("Error: Please enter a valid car from your car lot list.\n");
+                                }
                             }
                         } catch (NumberFormatException e) {
-                            System.out.println("\nError: Please enter a number.\n");
+                            System.out.println("\nError: Please enter a valid number.\n");
                         }
                     }
                     break;
@@ -109,14 +112,18 @@ public class Main {
                             if (num == 0) {
                                 System.out.println("Error: Please enter a valid car from the car lot list.\n");
                             } else {
-                                Vehicle vehicle = userDealership.carLot.get(num - 1);
-                                if(userDealership.testDriveVehicle(vehicle) == true) {
-                                    // Do nothing :)
-                                } else {
-                                    testDrive(vehicle);
-                                }
 
-                                input = null;
+                                try {
+                                    Vehicle vehicle = userDealership.carLot.get(num - 1);
+                                    if(userDealership.testDriveVehicle(vehicle) == true) {
+                                        // Do nothing :)
+                                    } else {
+                                        testDrive(vehicle);
+                                    }
+                                    input = null;
+                                } catch(IndexOutOfBoundsException e) {
+                                    System.out.println("Error: Please enter a valid car from your car lot list.\n");
+                                }
                             }
                         } catch (NumberFormatException e) {
                             System.out.println("\nError: Please enter a number.\n");

@@ -178,7 +178,7 @@ public class Dealership {
 //        System.out.println(isServiced);
 
         if (isClean && isFueled && isInsured && isServiced) {
-            System.out.println("\nEnjoy your test drive!" + Utils.printHzLine(50) + "\n");
+            System.out.println("\nEnjoy your test drive!\n" + Utils.printHzLine(50) + "\n\n");
             return true;
         } else {
             System.out.println("Sorry, this vehicle is not ready to be test driven");
@@ -289,6 +289,7 @@ public class Dealership {
                         break;
                 }
             }
+            System.out.println();
         }
     }
 
