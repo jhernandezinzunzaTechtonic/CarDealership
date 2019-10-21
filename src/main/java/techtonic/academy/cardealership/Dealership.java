@@ -5,7 +5,7 @@ import techtonic.academy.cardealership.sales.Receipt;
 import techtonic.academy.cardealership.vehicles.*;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -51,7 +51,8 @@ public class Dealership {
     }
 
     public void purchaseVehicle(int vehicleIndex) {
-        System.out.println(Utils.printHzLine(50));
+        vehicleIndex -= 1;
+        System.out.println("\n" + Utils.printHzLine(50));
         System.out.println("Purchasing Vehicle...");
         Vehicle[] vehicles = Factory.readyToShip;
 
@@ -68,7 +69,7 @@ public class Dealership {
                     balance = balance.subtract(priceOfCar);
                     addToCarLot(vehicles[vehicleIndex]);
                     Factory.findAndRemoveCar(vehicles[vehicleIndex], vehicleIndex);
-                    System.out.println("\nRemaining balance: " + balance);
+                    System.out.println("\nRemaining balance: " + balance + "\n");
                 } else if (balance.compareTo(priceOfCar) == -1) {
                     System.out.println("\nPurchase Failed! Price exceeds balance.\n");
                 }
@@ -87,26 +88,25 @@ public class Dealership {
 
 //        System.out.println("lastInsured on: " + vehicleInsuredDate);
         if (vehicleInsuredDate.isAfter(expireDate)) {
-            System.out.println("Valid Insurance");
+            System.out.println("This vehicle has valid Insurance.");
             return true;
         } else {
-            System.out.println("Expired insurance");
+            System.out.println("This vehicle has expired insurance.");
             return false;
         }
     }
 
     public boolean checkMaintenance(Vehicle vehicle) {
-        // TODO: add logic for checking maintenance.
         final long MAX_INSURED_PERIOD = 90; // Max days that insurance is valid
         LocalDate expireDate = LocalDate.now().minusDays(MAX_INSURED_PERIOD);
         LocalDate vehicleServicedDate = vehicle.getLastServiced();
 
 //        System.out.println("lastServiced on: " + vehicleServicedDate);
-        if (expireDate.isAfter(vehicleServicedDate)) {
-            System.out.println("It has been less than 90 days since your last service, you are good to go!");
+        if (vehicleServicedDate.isAfter(expireDate)) {
+            System.out.println("This vehicle has been serviced in the last 90 days.");
             return true;
         } else {
-            System.out.println("It has been more than 90 days since your last service.");
+            System.out.println("This vehicle has not been serviced in the last 90 days.");
             return false;
         }
     }
@@ -139,7 +139,7 @@ public class Dealership {
             vehicle.setLastServiced(currentDate);
             this.balance = balance.subtract(randomServiceCost);
             vehicle.setCostToDealership(randomServiceCost);
-            System.out.println("new costToDealership: " + vehicle.getCostToDealership());
+            System.out.println("Serviced!\nNew costToDealership: " + NumberFormat.getCurrencyInstance().format(vehicle.getCostToDealership()) + "\n");
         }
     }
 
@@ -161,10 +161,10 @@ public class Dealership {
         }
     }
 
-    public void testDriveVehicle(Vehicle vehicle) {
-        // TODO: add logic for test driving a vehicle.
+    public boolean testDriveVehicle(Vehicle vehicle) {
         boolean isClean, isFueled, isInsured, isServiced;
 
+        System.out.println(Utils.printHzLine(50) + "\nChecking Vehicle...");
         isClean = vehicle.isClean();
 //        System.out.println(isClean);
 
@@ -178,20 +178,27 @@ public class Dealership {
 //        System.out.println(isServiced);
 
         if (isClean && isFueled && isInsured && isServiced) {
-            System.out.println("Enjoy your test drive!");
+            System.out.println("\nEnjoy your test drive!" + Utils.printHzLine(50) + "\n");
+            return true;
         } else {
             System.out.println("Sorry, this vehicle is not ready to be test driven");
+            return false;
         }
     }
 
     public BigDecimal sellVehicle(Vehicle vehicle, Customer customer) {
-        // TODO: add logic for selling vehicle.
+        System.out.println("\n" + Utils.printHzLine(50) + "\nSelling Vehicle...");
         washVehicle(vehicle);
-        balance = balance.add(vehicle.getPrice());
+        this.balance = balance.add(vehicle.getPrice());
         Receipt receipt = new Receipt(vehicle, customer);
         salesHistory.add(receipt);
         customer.setVehicle(vehicle);
         findAndRemoveCar(vehicle.getVin());
+        System.out.println("Sale Completed!");
+        System.out.println("Car sold to " + customer.getName() + "!");
+        System.out.println("New balance: " + NumberFormat.getCurrencyInstance().format(this.balance));
+        System.out.println(Utils.printHzLine(50) + "\n");
+
         return this.balance;
     }
 
@@ -225,9 +232,10 @@ public class Dealership {
 
     // Remove car from readyToShip list
     public void findAndRemoveCar(String vin) {
+        System.out.println("Searching for car...");
         for (int i = 0; i < carLot.size(); i++) {
             if (carLot.get(i).getVin().equals(vin)) {
-                System.out.println("Match found, removing car...");
+                System.out.println("Car found, removing from lot...");
                 carLot.remove(i);
             }
         }
@@ -238,12 +246,14 @@ public class Dealership {
         String ANSI_RESET = "\u001B[0m";
         String dealershipString =
             ANSI_GREEN +
-            Utils.printHzLine(20) + " Dealership Details " + Utils.printHzLine(20) + "\n" +
-            Utils.printHzLine(60) + "\n" +
-            "Dealership Name: " + name + "\n" +
-            "Starting Balance: " + balance.setScale(2, RoundingMode.HALF_EVEN) + "\n" +
-            "# of cars in lot: " + carLot.size() + "\n" +
-            "# of cars sold: " + "<- FILL IN SALES HISTORY INFORMATION ->" + "\n" +
+            Utils.printHzLine(20) + " Dealership Details " + Utils.printHzLine(20) +
+            "\n" + Utils.printHzLine(60) +
+            "\nDealership Name: " + name +
+            "\nCurrent Balance: " + NumberFormat.getCurrencyInstance().format(balance) +
+            "\n# of cars in lot: " + carLot.size() +
+            "\n# of cars sold: " + salesHistory.size() +
+            "\n" + "<- FILL IN SALES HISTORY INFORMATION ->" +
+            "\n" +
             ANSI_RESET;
 
         System.out.println(dealershipString);
@@ -281,4 +291,14 @@ public class Dealership {
             }
         }
     }
+
+    public void salesSummary() {
+
+        for (Receipt receipt : salesHistory) {
+            System.out.println(receipt.receiptDetails());
+            Utils.printHzLine(60);
+        }
+
+    }
+
 }

@@ -26,4 +26,8 @@ public class Customer {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+
+    public String getName() {
+        return name;
+    }
 }

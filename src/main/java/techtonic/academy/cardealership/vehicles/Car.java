@@ -11,7 +11,11 @@ public class Car extends Vehicle {
 
         super.wheels = 4;
         super.fuelCapacity = randomFC;
-        this.mpg = mpg;
+        if(mpg <= 0){
+            throw new IllegalArgumentException("MPG must be greater than zero");
+        } else {
+            this.mpg = mpg;
+        }
     }
 
     public int getMpg() {

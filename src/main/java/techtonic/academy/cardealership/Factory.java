@@ -50,7 +50,7 @@ class Factory {
         // Convert the path String to a Path
         // For more info on java.nio.file.Path, read here: http://tutorials.jenkov.com/java-nio/path.html
         Path path = Paths.get(pathString);
-//        System.out.println(path);
+//        System.out.println("PATH: " + path);
         // Try to set the value of jsonString to a JSON String parsed from the file
         try {
             // Parse the contents of the file into a byte array,

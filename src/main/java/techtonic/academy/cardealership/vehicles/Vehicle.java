@@ -26,8 +26,6 @@ public class Vehicle {
     private boolean clean; // this boolean represents if a car is clean or not. (true === clean)
 
     private LocalDate lastServiced, lastInsured;
-    // lastServiced - a date reflecting the last time the vehicle had maintenance done
-    // lastInsured - a date reflecting the last time the vehicle's insurance was renewed
 
     public Vehicle(JsonObject object) {
         this.type = object.get("type").getAsString();
@@ -42,7 +40,7 @@ public class Vehicle {
         this.clean = object.get("clean").getAsBoolean();
         this.price = object.get("price").getAsBigDecimal();
         this.description = object.get("description").getAsString();
-        this.costToDealership = object.get("costToDealership").getAsBigDecimal();
+        this.costToDealership = price.multiply(BigDecimal.valueOf(.80)); // starts at 80% of the price
 
         // Parse date values
         String lastServicedString = object.get("maintenanceAndInsurance").getAsJsonObject().get("lastServiced").getAsString();
